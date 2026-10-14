@@ -1,0 +1,47 @@
+{
+ "format": "avsim-studio/1",
+ "params": {
+  "cutT0": 7.195,
+  "cutDur": 2.374,
+  "cutV": 14.87,
+  "pedT0": 11.567,
+  "pedV": 1.52,
+  "busGo": 13.92,
+  "cutDs": -5.561,
+  "tgT": 0.603,
+  "mu": 0.8,
+  "cutGap": 11.568,
+  "cutBrake": 0.0,
+  "pedGap": 4.809,
+  "pedLook": 1,
+  "civil": true
+ },
+ "policy": {},
+ "hazards": [
+  {
+   "x": 157.1,
+   "side": "S",
+   "v": 1.83,
+   "t0": 0.0,
+   "trig": 37.1,
+   "type": "ped"
+  }
+ ],
+ "ego": "planner",
+ "space": {
+  "h0_x": [
+   150,
+   300
+  ],
+  "h0_v": [
+   1.0,
+   2.0
+  ],
+  "h0_trig": [
+   10,
+   40
+  ]
+ },
+ "exposure": 0.02,
+ "why": "Người băng ngang giữa khối nhà (không có vạch), bước ra từ lề phía S trên đoạn x 150-300 m, sau xe buýt đỗ (x ≈ 106) và vạch qua đường (x = 122). h0_v 1,0-2,0 m/s: phân vị 15 tốc độ đi bộ là 0,97 m/s (≥65 tuổi) và 1,25 m/s (14-64 tuổi) (Knoblauch et al. 1996, TRR 1538); người băng ngang giữa khối thường đi nhanh/chạy bước nhỏ nên lấy cận trên 2,0, dưới ngưỡng chạy 2,5 m/s của lab. h0_trig 10-40 m: ở ~12 m/s là khe thời gian ~1-3 s, tức phần đuôi nguy hiểm của người chấp nhận khe ngắn; khe dài hơn thì planner dừng dễ, không cần đo. exposure 0,02/chuyến (giả định, yếu nhất): nghiên cứu Milwaukee (SSTI 2026) thấy ~1/6 lượt sang đường là giữa khối; giả định ~30 lượt sang đường/giờ trên đoạn phố thương mại này -> ~5 lượt giữa khối/giờ; xe ta đi qua đoạn 150 m trong ~15 s -> 5 x 15/3600 ≈ 0,02. Cần đếm thật trên đoạn phố đó để thay số 30 lượt/giờ."
+}
